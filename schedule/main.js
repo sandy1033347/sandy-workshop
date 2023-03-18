@@ -1,5 +1,5 @@
 $(function(){
-   $("#courseTable").append("<tr><th>場次</th><th>時間</th><th>主題</th></tr>");
+   $("#courseTable").append("<tr><th>場次</th><th>Day1</th><th>Day2</th><th>主題</th></tr>");
 
    let topicCount = topic.length;
    let millisecsPerDay = 24*60*60*1000; 
@@ -24,6 +24,7 @@ $(function(){
         `<td>${i+1}</td>`+
         `<td>${new Date(startoddDate.getTime()+7*i*millisecsPerDay).toLocaleDateString().substring(5,10)}</td>`+
         `<td>${new Date(startevenDate.getTime()+7*i*millisecsPerDay).toLocaleDateString().substring(5,10)}</td>`+
+        `<td>${topic[i]}</td>`+
         "</tr>"
 
 
